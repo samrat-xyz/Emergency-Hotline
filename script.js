@@ -91,7 +91,7 @@ document.querySelectorAll('.call-btn').forEach(function(btn){
             addCallHistory(subTitleText, phoneNumber);
 
         } else {
-            alert("Call failed! Not enough coins in your balance.");
+            alert("❌ Call failed! Not enough coins in your balance.");
 
         }
     });

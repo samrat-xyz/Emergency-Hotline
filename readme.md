@@ -1,165 +1,32 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
+1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
+Answer : getElementById is the method that works only with an element’s id. It returns just that one element because ids are supposed to be unique.
 
-### 📅 No Deadline For 50 marks
+getElementsByClassName is the method that works with class names. It gives back a collection of all elements with that class, and that collection is live, meaning it updates automatically if the DOM changes.
 
-### 📅 Deadline For 30 marks: Any time after 29th August.
+querySelector is the method that works with any CSS selector, not just id or class. It only gives you the first matching element.
 
----
+querySelectorAll is almost the same, but it gives you all the matches. The difference is the result is static, so it won’t change automatically if the DOM updates.
 
-## ✅ Main Requirements (50 Marks)
+2. How do you create and insert a new element into the DOM?
 
-### 1. Navbar
+Answer : Creating a new element in the DOM starts with document.createElement, which makes an element in memory but not yet on the page. After that, the element is customized by adding text, attributes, or classes. Finally, the element is inserted into the document using methods such as appendChild, append, or prepend on a parent element, which places it inside the DOM.
 
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
+3. What is Event Bubbling and how does it work?
 
----
+Answer : Event bubbling is the process where an event starts from the deepest target element and then moves upward through its ancestors in the DOM tree. For example, when a click happens on a button inside a div, the event is first handled by the button itself, then by the parent div, then by higher-level ancestors, and finally by the document if they have event listeners. This upward travel of the same event is what’s called bubbling.
 
-### 2. Hero Section
 
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
+4. What is Event Delegation in JavaScript? Why is it useful?
 
----
+Answer : Event delegation is a technique where a single event listener is added to a parent element to handle events on its child elements, instead of adding separate listeners to each child. When an event occurs on a child, it bubbles up to the parent, and the parent’s listener can check which child triggered it.
 
-### 2. Main Section
+It is useful because it reduces memory usage, makes the code cleaner, and allows handling dynamic elements that are added to the DOM later without needing to attach new listeners.
 
-This Section will have layout as figma
+5. What is the difference between preventDefault() and stopPropagation() methods?
 
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
+Answer: preventDefault() is a method that stops the default action of an element from happening. For example, it can prevent a link from navigating or a form from submitting.
 
-### Emergency Hotline Section
+stopPropagation() is a method that stops the event from bubbling up (or capturing down) the DOM. It prevents parent elements from being notified of the event.
 
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
-
-## Create Readme
-
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
-
-### 6. Answer the following questions clearly:
-
-1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-2. How do you **create and insert a new element into the DOM**?
-3. What is **Event Bubbling** and how does it work?
-4. What is **Event Delegation** in JavaScript? Why is it useful?
-5. What is the difference between **preventDefault() and stopPropagation()** methods?
-
----
-
-## 🧪 Challenges Part (10 Marks)
-
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
-
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
-
-💡Hint: Search Google with that below question
-
-```bash
-How to get current local time in js
-```
-
----
-
-## ⚙️ Technology Stack
-
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
-
----
-
-## 📌 Rules
-
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
-
----
-
-# Let's Code and Achieve your Dream 🎯
+In short, preventDefault() stops the browser’s default behavior, while stopPropagation() stops the event from reaching other elements.
